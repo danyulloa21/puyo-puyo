@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puyo Puyo Clone en JS</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main>
+        <h1>Puyo Puyo</h1>
+        <section class="game-info">
+            <div>Puntuación: <strong id="score-val">0</strong></div>
+            <div>Nivel: <strong id="level-val">1</strong></div>
+            <div>Récord: <strong id="high-score-val">0</strong></div>
+        </section>
+
+        <div class="game-layout">
+            <div id="game-container">
+                <canvas id="gameCanvas" width="360" height="720"></canvas>
+                <div id="combo-message" aria-live="polite"></div>
+                <div id="overlay" class="overlay">
+                    <h2 id="overlay-title">Puyo Puyo</h2>
+                    <p id="overlay-message">Forma grupos de cuatro o más Puyos iguales.</p>
+                    <button id="start-button">Comenzar</button>
+                </div>
+            </div>
+
+            <aside class="side-panel">
+                <section class="next-piece">
+                    <span>Siguiente pieza</span>
+                    <canvas id="nextCanvas" width="180" height="60"></canvas>
+                </section>
+                <div class="controls">
+                    <button id="pause-button" disabled>Pausar</button>
+                    <button id="restart-button">Reiniciar</button>
+                </div>
+                <p class="side-tip">La sombra muestra dónde caerá la pieza.</p>
+            </aside>
+        </div>
+
+        <p class="instructions">← → mover · ↑ rotar · ↓ bajar · P pausar</p>
+    </main>
+    <script src="js/game.js"></script>
+</body>
+</html>
